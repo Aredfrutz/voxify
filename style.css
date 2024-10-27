@@ -1,0 +1,144 @@
+/* Reset default margin and padding, and set box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: "Old Standard TT", serif; /* Set the font for the entire body */
+    background-image: radial-gradient(
+        rgba(34, 139, 34, 0.8), /* Dark green */
+        rgba(46, 139, 87, 0.8), /* Medium green */
+        rgba(144, 238, 144, 0.8) /* Light green */
+    );
+    background-repeat: repeat; /* Allow background to repeat */
+    height: 100vh; /* Full viewport height */
+    background-size: 10px 10px; /* Set size of the gradient pattern */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Main container styles */
+main {
+    width: 90%; /* Full width on smaller screens */
+    max-width: 500px; /* Max width for larger screens */
+    background-color: #E8F5E9; /* Light green background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+}
+
+/* Header styles */
+h1 {
+    font-family: "Old Standard TT", serif; /* Use the same font for the header */
+    background-color: #3C763D; /* Darker green for header background */
+    color: #F2F5F9; /* Light color for text */
+    text-align: center; /* Center the header text */
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+    border-bottom: 5px solid #2E4B2C; /* Darker border at the bottom */
+    padding: 5px 0; /* Vertical padding */
+    font-size: 50px; /* Large font size for header */
+}
+
+/* Styles for form elements */
+select, input, textarea {
+    font-family: "Old Standard TT", serif; /* Consistent font across inputs */
+    width: 100%; /* Full width for inputs */
+    margin: 10px 0; /* Vertical spacing between elements */
+    padding: 10px; /* Inner spacing */
+    font-size: 20px; /* Font size for readability */
+    border: 1px solid #2E4B2C; /* Dark green border */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+/* Textarea specific styles */
+textarea {
+    height: 150px; /* Fixed height for the textarea */
+}
+
+/* Flex container for buttons */
+div {
+    display: flex; /* Use flexbox for button layout */
+    flex-direction: column; /* Stack buttons vertically on small screens */
+}
+
+/* Styles for buttons */
+div button {
+    background-color: #5A9B5A; /* Mid green for button background */
+    color: #F2F5F9; /* Light color for button text */
+    width: 100%; /* Full width for buttons */
+    font-size: 20px; /* Font size for button text */
+    border: 0; /* No border */
+    border-bottom: 5px solid #4B8B4B; /* Darker border for visual depth */
+    padding: 10px; /* Inner spacing */
+    margin: 10px 0; /* Vertical spacing between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Position for active state */
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+/* Active button state */
+div button:active {
+    top: 2px; /* Move button down slightly when pressed */
+}
+
+/* Styles for the range input */
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default styling */
+    width: 100%; /* Full width for the range input */
+    height: 8px;
+    background: #A8D5BA; /* Light green track */
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Style the thumb (the draggable part) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #5A9B5A; /* Mid green thumb */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    margin-top: -6px; /* Align thumb to center */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #5A9B5A; /* Mid green thumb */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    margin-top: -6px; /* Align thumb to center */
+}
+
+/* Style the track (the part the thumb slides on) */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 5px;
+    background: #A8D5BA; /* Light green track */
+}
+
+input[type="range"]::-moz-range-track {
+    height: 8px;
+    border-radius: 5px;
+    background: #A8D5BA; /* Light green track */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+    }
+    textarea {
+        height: 120px; /* Adjust textarea height for smaller screens */
+    }
+    div {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+}

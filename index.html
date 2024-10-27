@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" /> <!-- Set character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings -->
+  <title>Voxify</title> <!-- Title of the webpage -->
+  
+  <!-- Preconnect to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Link to the Old Standard TT font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Link to the external CSS stylesheet for styling -->
+  <link rel="stylesheet" href="style.css"/>
+  
+  <!-- Link to the external JavaScript file that will be executed after the document has been parsed -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Voxify</h1> <!-- Main title of the application -->
+    
+    <select id="voices"></select> <!-- Dropdown to select speech voices -->
+    
+    <label>Rate</label> <!-- Label for speech rate input -->
+    <input type="range" id="rate" value="1" min="0" max="3" step="0.1"/> <!-- Slider for adjusting speech rate -->
+    
+    <label>Pitch</label> <!-- Label for speech pitch input -->
+    <input type="range" id="pitch" value="1" min="0" max="2" step="0.1"/> <!-- Slider for adjusting speech pitch -->
+    
+    <textarea id="text">Welcome to Crack the Code!</textarea> <!-- Text area for user input with a default message -->
+    
+    <div>
+      <button id="stop-button">stop</button> <!-- Button to stop the speech -->
+      <button id="speak-button">speak</button> <!-- Button to initiate speech -->
+    </div>
+  </main>
+</body>
+</html>
